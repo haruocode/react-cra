@@ -20,6 +20,7 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "prepare": "husky",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,6 +28,15 @@
       "react-app",
       "react-app/jest",
       "prettier"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{css,md,json}": [
+      "prettier --write"
     ]
   },
   "browserslist": {
@@ -43,6 +53,8 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.3",
     "prettier": "^3.6.2"
   }
 }

@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+command -v npx >/dev/null 2>&1 || {
+  echo "npx is required to run lint-staged" >&2
+  exit 1
+}
+
+if [ -f "$(dirname -- "$0")/_/husky.sh" ]; then
+  . "$(dirname -- "$0")/_/husky.sh"
+fi
+
+npx lint-staged
