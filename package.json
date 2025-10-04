@@ -23,13 +23,6 @@
     "prepare": "husky",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "prettier"
-    ]
-  },
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --cache --fix",
